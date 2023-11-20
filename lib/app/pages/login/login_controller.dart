@@ -10,4 +10,8 @@ class LoginController extends ChangeNotifier {
     obscureText = !obscureText;
     notifyListeners();
   }
+
+  void setEmail(String value){
+
+  }
 }
