@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:habit_app/app/pages/login/login_controller.dart';
+import 'package:habit_app/app/pages/reset_password/reset_password_page.dart';
 import 'package:habit_app/app/pages/sign_up/sign_up_page.dart';
 import 'package:habit_app/app/utils/app_colors.dart';
 import 'package:habit_app/app/widgets/app_button.dart';
@@ -50,7 +51,18 @@ class _LoginPageState extends State<LoginPage> {
               alignment: Alignment.topRight,
               child: Container(
                 margin: const EdgeInsets.only(top: 50, right: 30),
-                child: SvgPicture.asset('assets/icons/ic_loupe.svg'),
+                child: InkWell(
+                  onTap: (){},
+                  child: Container(
+                    height: 45,
+                    width: 45,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(65),
+                      color: AppColors.purple.withOpacity(0.1),
+                    ),
+                    child: const Icon(Icons.question_mark),
+                  ),
+                ),
               ),
             ),
             Align(
@@ -240,7 +252,13 @@ class _LoginPageState extends State<LoginPage> {
                             height: 20,
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const ResetPasswordPage()));
+                            },
                             child: Text(
                               'Forgot Password?',
                               style: TextStyle(color: AppColors.purple),
