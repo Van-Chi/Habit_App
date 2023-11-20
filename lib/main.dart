@@ -6,6 +6,7 @@ import 'package:habit_app/app/pages/introduction/introduction_page.dart';
 import 'package:habit_app/app/pages/login/login_controller.dart';
 import 'package:provider/provider.dart';
 
+import 'app/pages/reset_password/reset_password_controller.dart';
 import 'app/pages/sign_up/sign_up_controller.dart';
 
 Future main() async {
@@ -24,6 +25,9 @@ Future main() async {
         }),
         ChangeNotifierProvider<SignUpController>(create: (context) {
           return SignUpController();
+        }),
+        ChangeNotifierProvider<ResetPasswordController>(create: (context) {
+          return ResetPasswordController();
         })
       ],
       child: const MyApp(),
