@@ -90,15 +90,13 @@ class _LoginPageState extends State<LoginPage> {
                       child: AppButton(
                         backgroundColor: Colors.white,
                         content: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            const SizedBox(
-                              width: 63,
-                            ),
+
                             SizedBox(
-                              height: 30,
-                              width: 30,
+                              height: 32,
+                              width: 32,
                               child: SvgPicture.asset(
                                   'assets/icons/ic_google.svg'),
                             ),
@@ -106,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
                               width: 30,
                             ),
                             const Text(
-                              'Continue with  Google',
+                              'Continue with  Google     ',
                               style: TextStyle(
                                 color: Color(0xff573353),
                                 fontWeight: FontWeight.bold,
@@ -127,19 +125,15 @@ class _LoginPageState extends State<LoginPage> {
                       child: AppButton(
                         backgroundColor: Colors.white,
                         content: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            const SizedBox(
-                              width: 63,
-                            ),
+
                             SizedBox(
-                              child: SizedBox(
-                                width: 32,
-                                height: 32,
-                                child: SvgPicture.asset(
-                                    'assets/icons/ic_facebook.svg'),
-                              ),
+                              width: 32,
+                              height: 32,
+                              child: SvgPicture.asset(
+                                  'assets/icons/ic_facebook.svg'),
                             ),
                             const SizedBox(
                               width: 30,
